@@ -17,11 +17,11 @@ scratch every time.
 
 ## Commands
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Starts the dev server using `webpack.dev.js` (development mode, live reload) |
-| `npm run build` | Builds into `dist/` using `webpack.prod.js` (production mode, minified) |
-| `npm run deploy` | Pushes the `dist/` folder to the `gh-pages` branch |
+| Command          | What it does                                                                 |
+| ---------------- | ---------------------------------------------------------------------------- |
+| `npm run dev`    | Starts the dev server using `webpack.dev.js` (development mode, live reload) |
+| `npm run build`  | Builds into `dist/` using `webpack.prod.js` (production mode, minified)      |
+| `npm run deploy` | Pushes the `dist/` folder to the `gh-pages` branch                           |
 
 Order matters when deploying: run `npm run build` first, commit `dist`, then run
 `npm run deploy`. Deploying without building publishes the previous output.
@@ -63,13 +63,13 @@ How it's split:
 
 ## Installed loaders and what they do
 
-| Package | Job |
-|---|---|
-| `html-webpack-plugin` | Generates `dist/index.html` from `src/template.html` and injects the bundle's script tag |
-| `style-loader` + `css-loader` | Make `import "./style.css"` work from JS and inject the CSS into the page |
-| `html-loader` | Lets webpack follow `<img src="...">` paths inside HTML |
-| `webpack-dev-server` | Local server with live reload |
-| `webpack-merge` | Merges the config files |
+| Package                       | Job                                                                                      |
+| ----------------------------- | ---------------------------------------------------------------------------------------- |
+| `html-webpack-plugin`         | Generates `dist/index.html` from `src/template.html` and injects the bundle's script tag |
+| `style-loader` + `css-loader` | Make `import "./style.css"` work from JS and inject the CSS into the page                |
+| `html-loader`                 | Lets webpack follow `<img src="...">` paths inside HTML                                  |
+| `webpack-dev-server`          | Local server with live reload                                                            |
+| `webpack-merge`               | Merges the config files                                                                  |
 
 Images don't need a separate loader — webpack 5's built-in `asset/resource` type
 handles them. To use one from JS:
