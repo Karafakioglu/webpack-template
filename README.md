@@ -5,3 +5,5 @@
 ## Live Preview
 
 ## Built With
+
+### [Setup](SETUP.md)
